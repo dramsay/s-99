@@ -1,12 +1,16 @@
 // P02 (*) Find the last but one element of a list.
 
 
-// This solution throws java.util.NoSuchElementException given an empty list
+// These solution throws java.util.NoSuchElementException given an empty list
 // def penultimate(l: List[Any]) = l takeRight 2 head
+//
+// or 
+//
+// def penultimate(l: List[Any]) = l reverse (1)
 
 // This solution handles empty lists
 def penultimate(l: List[Any]) = {
-  if (l.length >= 2) l takeRight 2 head
+  if (l.length >= 2) l reverse (1)
   else None
 }
 
